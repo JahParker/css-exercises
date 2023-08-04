@@ -1,6 +1,15 @@
+* {
+  /* Removes default margin and padding */
+  margin: 0;
+  padding: 0;
+}
+
 .header  {
   font-family: monospace;
   background: papayawhip;
+/* 
+  Makes all children form a row 
+  display: flex; */
 }
 
 .logo {
@@ -9,12 +18,19 @@
   color: tomato;
   background: white;
   padding: 4px 32px;
+/* 
+  Adds space at the top and bottom while also pushing away the left and right side links 
+  margin: 10px auto; */
 }
 
 ul {
   /* this removes the dots on the list items*/
   list-style-type: none;
-}
+/* 
+  Transforms li elements into a row and adds a gap in between them 
+  display: flex;
+  gap: 10px; */
+} 
 
 a {
   font-size: 22px;
@@ -23,3 +39,24 @@ a {
   /* this removes the line under the links */
   text-decoration: none;
 }
+/* 
+.left-links,
+.right-links {
+
+  display: flex;
+  margin: 10px;
+  align-items: center;
+} */
+
+.header {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  gap: 10px;
+}
+
