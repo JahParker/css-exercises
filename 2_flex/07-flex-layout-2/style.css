@@ -27,3 +27,71 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/* 
+Thought Process:
+I will use a similar idea as the last exercise to keep the header and footer in their respective places. 
+The middle are will be kept within a div. Separated by the links, then the cards, and then ensuring there is empty space on the right with wrapping
+*/
+
+/* Pre Solution */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  list-style-type: none;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.content{
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  flex-shrink: 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.card {
+  padding: 16px;
+  flex-basis: 325px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
