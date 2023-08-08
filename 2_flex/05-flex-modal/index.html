@@ -1,3 +1,15 @@
+<!-- 
+  Thought process:
+  Group the top level content (icon, header, close-button) w/ a div and set display as flex
+  Group text and buttons (continue, cancel) w/ a div and set display as flex w/ flex direction set as column. Center horizontally
+  Nest the buttons and set the display to flex with flex direction of row. Justify w/ flex start  
+  Adjust spacing
+
+  Revisions:
+  I had a clearer picture once I drew out how the layout could be set up based on the desired outcome. 
+  I blocked it out so the icon block stretches from the left most side and down to the bottom. The header and close button has its own block covering the top, stetching left to right.
+  Finally the text and buttons will have its own space
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,13 +20,18 @@
     <title>Modal</title>
   </head>
   <body>
-    <div class="modal">
+    <div class="modal"> 
       <div class="icon">!</div>
-      <div class="header">Are you sure you want to do that?</div>
-      <button class="close-button">✖</button>
-      <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
-      <button class="continue">Continue</button>
-      <button class="cancel">Cancel</button>
+      <div class="main-content">
+        <div class="top-level">
+          <div class="header">Are you sure you want to do that?</div> 
+          <!-- Could have encapsulated the close button w/i the header div instead -->
+          <button class="close-button">✖</button>
+        </div>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
+        <button class="continue">Continue</button>
+        <button class="cancel">Cancel</button>
+      </div>
     </div>
   </body>
 </html>
