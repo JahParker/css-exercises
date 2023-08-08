@@ -34,15 +34,7 @@ I will use a similar idea as the last exercise to keep the header and footer in 
 The middle are will be kept within a div. Separated by the links, then the cards, and then ensuring there is empty space on the right with wrapping
 */
 
-/* Pre Solution */
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+/* Post Solution */
 
 body {
   display: flex;
@@ -51,6 +43,12 @@ body {
 
 ul {
   list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+}
+
+li {
+  margin-bottom: 16px;
 }
 
 a {
@@ -62,8 +60,7 @@ a {
 .header {
   display: flex;
   align-items: center;
-  padding: 16px;
-  list-style-type: none;
+  padding: 0 16px;
   font-size: 32px;
   font-weight: 900;
 }
@@ -75,6 +72,7 @@ a {
 
 .sidebar {
   flex-shrink: 0;
+  padding: 16px;
 }
 
 .cards {
@@ -82,12 +80,11 @@ a {
   flex-wrap: wrap;
   padding: 32px;
   gap: 16px;
-  align-items: stretch;
 }
 
 .card {
   padding: 16px;
-  flex-basis: 325px;
+  flex-basis: 300px;
 }
 
 .footer {
