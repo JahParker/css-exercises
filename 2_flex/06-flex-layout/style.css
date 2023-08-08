@@ -34,7 +34,7 @@ I need to make a rule that will change the color, remove the bullets, and the un
 The contents needs center  vertically and horizontally
 */
 
-/* Pre Solution */
+/* Post Solution */
 
 body {
   display: flex;
